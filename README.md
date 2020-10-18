@@ -10,6 +10,7 @@ Game Title: Escape Room
 Game Description: Escape the room collecting as many items as you can and avoiding creeping monsters.
 
 (3) Game Features:
+
 (I) Basic Features
 
     (a) Stages
@@ -33,8 +34,11 @@ Game Description: Escape the room collecting as many items as you can and avoidi
       (c4) (Optional) S -> Super Weapon / 
       
     (d) Score Calculation System
+    
       (d1) X: score   Y: # of paths
+      
            Total Score = X*50 - Y*0.5 (Details TBA)
+           
            If the Scores are the same, the player with less paths wins
 
 (II) Generation of random game sets or events

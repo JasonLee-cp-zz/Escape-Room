@@ -15,66 +15,66 @@ HKU ENGG1340 Project
 
 (3) Game Features:
 
-(I) Basic Features
+    (I) Basic Features
 
-    (a) Stages
+       (a) Stages
     
-      (a1) Three Stages (Easy, Medium, Hard)
+        (a1) Three Stages (Easy, Medium, Hard)
       
-      (a2) Bonus Map (Item random generation - as many items as possible in the limited time)
+       (a2) Bonus Map (Item random generation - as many items as possible in the limited time)
       
-    (b) Items
+       (b) Items
     
-      (b1) ! -> item to be collected
+        (b1) ! -> item to be collected
       
-    (c) Weapons
+        (c) Weapons
+        
+         (c1) A -> Ammo / 5 bullets per 1 Ammo
+      
+         (c2) B -> Time Bomb / bomb up&down&left&right by one cell ->explode in 2-3 seconds
+      
+          (c3) M -> Magnet / Collect a distant item (visual effect of pulling the item into the user)
+      
+         (c4) (Optional) S -> Super Weapon / 
+      
+        (d) Score Calculation System
     
-      (c1) A -> Ammo / 5 bullets per 1 Ammo
+          (d1) X: score   Y: # of paths
       
-      (c2) B -> Time Bomb / bomb up&down&left&right by one cell ->explode in 2-3 seconds
-      
-      (c3) M -> Magnet / Collect a distant item (visual effect of pulling the item into the user)
-      
-      (c4) (Optional) S -> Super Weapon / 
-      
-    (d) Score Calculation System
-    
-      (d1) X: score   Y: # of paths
-      
-           Total Score = X*50 - Y*0.5 (Details TBA)
+               Total Score = X*50 - Y*0.5 (Details TBA)
            
-           If the Scores are the same, the player with less paths wins
+               If the Scores are the same, the player with less paths wins
 
-(II) Generation of random game sets or events
+    (II) Generation of random game sets or events
 
-    - Wandering monsters in the map
+      - Wandering monsters in the map
     
-    - Random generation of items
+       - Random generation of items
 
-(III) Data structures for storing game status
+    (III) Data structures for storing game status
 
-    - C++ Hashmap - multimap to store username/score/# of paths
+      - C++ Hashmap - multimap to store username/score/# of paths
     
-    - Stored in decreasing order so that the player with highest score is located at the top
+       - Stored in decreasing order so that the player with highest score is located at the top
 
-(IV) Dynamic memory management
+    (IV) Dynamic memory management
 
-    - dynamic size of multimap to store username/score/# of paths
+       - dynamic size of multimap to store username/score/# of paths
     
-    - more too be added...
+        - more too be added...
     
-(V) File input/output (e.g., for loading/saving game status)
+    (V) File input/output (e.g., for loading/saving game status)
 
-    - Score.txt file to store username/score/#of paths
+        - Score.txt file to store username/score/#of paths
     
-    - Import the scoreboard from the file when a new game is started
+      - Import the scoreboard from the file when a new game is started
 
-(VI) Program codes in multiple files
+    (VI) Program codes in multiple files
 
-    - 3 cpp files / 3 header files
+       - 3 cpp files / 3 header files
     
-(VII) Proper indentation and naming styles
+    (VII) Proper indentation and naming styles
 
-(VIII) In-code documentation
+    (VIII) In-code documentation
 
 

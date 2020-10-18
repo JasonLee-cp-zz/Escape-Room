@@ -11,16 +11,27 @@ Game Description: Escape the room collecting as many items as you can and avoidi
 
 (3) Game Features:
 (I) Basic Features
+
     (a) Stages
+    
       (a1) Three Stages (Easy, Medium, Hard)
+      
       (a2) Bonus Map (Item random generation - as many items as possible in the limited time)
+      
     (b) Items
+    
       (b1) ! -> item to be collected
+      
     (c) Weapons
+    
       (c1) A -> Ammo / 5 bullets per 1 Ammo
+      
       (c2) B -> Time Bomb / bomb up&down&left&right by one cell ->explode in 2-3 seconds
+      
       (c3) M -> Magnet / Collect a distant item (visual effect of pulling the item into the user)
+      
       (c4) (Optional) S -> Super Weapon / 
+      
     (d) Score Calculation System
       (d1) X: score   Y: # of paths
            Total Score = X*50 - Y*0.5 (Details TBA)

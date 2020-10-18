@@ -2,12 +2,16 @@
 HKU ENGG1340 Project
 
 (1) Team Members :
-Changjin Lee UID : 3035435840
-Changmin Han UID : 3035496519
+
+    Changjin Lee UID : 3035435840
+
+    Changmin Han UID : 3035496519
 
 (2) About Game:
-Game Title: Escape Room
-Game Description: Escape the room collecting as many items as you can and avoiding creeping monsters.
+
+    Game Title: Escape Room
+
+    Game Description: Escape the room collecting as many items as you can and avoiding creeping monsters.
 
 (3) Game Features:
 

@@ -23,9 +23,11 @@ HKU ENGG1340 Project
       
         (a2) Bonus Map (Item random generation - as many items as possible in the limited time)
       
+      
        (b) Items
     
         (b1) ! -> item to be collected
+        
       
        (c) Weapons
         
@@ -36,6 +38,7 @@ HKU ENGG1340 Project
          (c3) M -> Magnet / Collect a distant item (visual effect of pulling the item into the user)
       
          (c4) (Optional) S -> Super Weapon / 
+         
       
         (d) Score Calculation System
     

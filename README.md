@@ -42,22 +42,31 @@ Game Description: Escape the room collecting as many items as you can and avoidi
            If the Scores are the same, the player with less paths wins
 
 (II) Generation of random game sets or events
+
     - Wandering monsters in the map
+    
     - Random generation of items
 
 (III) Data structures for storing game status
+
     - C++ Hashmap - multimap to store username/score/# of paths
+    
     - Stored in decreasing order so that the player with highest score is located at the top
 
 (IV) Dynamic memory management
+
     - dynamic size of multimap to store username/score/# of paths
+    
     - more too be added...
     
 (V) File input/output (e.g., for loading/saving game status)
+
     - Score.txt file to store username/score/#of paths
+    
     - Import the scoreboard from the file when a new game is started
 
 (VI) Program codes in multiple files
+
     - 3 cpp files / 3 header files
     
 (VII) Proper indentation and naming styles

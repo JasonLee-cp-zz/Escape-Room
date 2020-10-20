@@ -37,7 +37,7 @@ HKU ENGG1340 Project
       
          (c3) M -> Magnet / Collect a distant item (visual effect of pulling the item into the user)
       
-         (c4) (Optional) S -> Super Weapon / 
+         (c4) (Optional) S -> Super Weapon / BFS
          
       
         (d) Score Calculation System

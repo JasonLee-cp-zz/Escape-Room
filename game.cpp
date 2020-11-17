@@ -50,3 +50,18 @@ void titleDraw() { //Main Title draw
 	cout << "		#######   #####    ####  #       #  #       #####\n";
 	printf("\x1b[0m");
 }
+
+
+int menuDraw() {
+	int x = 35; //x coordinate for Game Options in the main menu
+	int y = 12; //y coordinate for Game Options in the main menu
+	printf("\x1b[31m"); 
+	gotoxy(x - 2, y); // move -2 in x coordinate to print out "> " which takes two spaces
+	cout << "> Game Start";
+	gotoxy(x, y + 1); //+1 y
+	cout << "About Game";
+	gotoxy(x, y + 2); //+2 y
+	cout << "EXIT\n\n";
+	printf("\x1b[0m");
+
+}

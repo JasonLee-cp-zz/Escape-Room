@@ -25,7 +25,9 @@ HKU ENGG1340 Project
     
     3) When entered the game, directions keys are the same 
     
-      3-1) 'P' for shoot Ammo, 'O' for Bomb (Make sure to collect A/B to be able to perform this function)
+      3-1) You will enter your name to play. Here, press ENTER instead of SPACE BAR to proceed
+      
+      3-2) 'P' for shoot Ammo, 'O' for Bomb (Make sure to collect A/B to be able to perform this function)
       
     4) (IMPORTANT) When you shoot Ammo, you can ONLY shoot to the "current" direction, meaning the direction status at the bottom of the screen indicates
     

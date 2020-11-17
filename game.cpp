@@ -17,3 +17,10 @@ struct termios oldt,newt;
  tcsetattr(0,TCSAFLUSH, &save);
 return ch;
 }
+
+void saveData(){ // Save score data to a file from hashmap
+ if(first_open==true) return; //If open for the first time, don't save it
+ fout.open(fileName.c_str());
+for (auto i:mp) fout<<i.second <<" "<<i.first <<"\n"; //Copy data from map to the file
+exit(1);
+}

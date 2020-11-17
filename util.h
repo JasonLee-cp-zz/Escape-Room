@@ -5,6 +5,6 @@
 #include "main.h"
 #endif
 
-void init();
+//util functions 
 void gotoxy(int, int);
 void refresh();

@@ -24,3 +24,9 @@ void saveData(){ // Save score data to a file from hashmap
 for (auto i:mp) fout<<i.second <<" "<<i.first <<"\n"; //Copy data from map to the file
 exit(1);
 }
+
+
+int keyControl(){
+ int cur = getch(); //accept keyboard input
+
+}

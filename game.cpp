@@ -104,3 +104,32 @@ int menuDraw() {
 		}
 	}
 }
+
+
+string userInfo() { //Accept user Info
+	gotoxy(30, 10);
+	string user;
+	printf("\x1b[32m");
+	cout << "Enter Username: ";
+	printf("\x1b[0m");
+	getline(cin, user);
+	return user;
+}
+
+void itemGen(vector<string>& board) { //Iten Random Generator
+	int cnt = 30; //30 Items Total
+	int ranX;
+	int ranY;
+
+	while (cnt > 0) {
+		//Accept random ranX, ranY variables
+		int ranX = 1 + (rand() % (8));
+		int ranY = 1 + (rand() % (61));
+		
+		//Allocate item avoiding #(wall),!(item),A(Ammo),B(Bomb) and *(player),@(destination)
+		if (board[ranX][ranY] == '#' || board[ranX][ranY] == '!' || board[ranX][ranY] == 'A' || board[ranX][ranY] == 'B') continue;
+		if ((ranX == 1 && ranY == 1) || (ranX == 8 && ranY == 60)) continue;
+		board[ranX][ranY] = '!';
+		cnt--;
+	}
+}

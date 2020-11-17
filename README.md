@@ -108,5 +108,9 @@ HKU ENGG1340 Project
     
 
     (VIII) In-code documentation
+    
+    (Libarires)
+    * termios.h -> getch()
+    * unistd.h -> time delay
 
 

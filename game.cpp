@@ -28,5 +28,13 @@ exit(1);
 
 int keyControl(){
  int cur = getch(); //accept keyboard input
-
+ 
+ //When different inputs are given, return UP/RIGHT/LEFT/DOWN/SHOOT/BOMB/SUBMIT according to their respective values defined in game.h
+ if(cur=='w' || cur=='W') return UP; 
+ else if(cur== 'd' || cur =='D') return RIGHT;
+ else if(cur== 'a' || cur=='A') return LEFT;
+ else if(cur== 's' || cur=='S') return DOWN;
+ else if(cur== 'p' || cur == 'P') return SHOOT;
+ else if(cur== 'o' || cur == 'O') return BOMB;
+ else if(cur== ' ') return SUBMIT;
 }

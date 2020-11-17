@@ -309,6 +309,27 @@ void gamePlay() {
 	cout << "RIGHT";
 	 printf("\x1b[0m");
 
+	while (true) { //game play control
+		int cur = keyControl(); //key key control 
+		switch (cur) {
+		case BOMB: { // 'O' bomb -> bomb up/down/left/right 
+			if (Bomb <= 0) break; //If no bomb remaining, don't do that
+			Bomb--;
+			gotoxy(56, 16);
+			cout << Bomb; //update bomb status.
+			for (int dir = 0; dir < 4; dir++) { //As long as it's not the border, bomb the target even including items/Ammos/Bombs etc
+				int nx = xCor + dx[dir];
+				int ny = yCor + dy[dir];
+				if (nx == 1 || ny == 1 || nx == boardHeight || ny == boardWidth) continue;
+				board[nx-1][ny-1] = ' ';
+				gotoxy(ny, nx); cout << " ";
+			}
+
+
+			break;
+			}
+		}
+	}
 
 
 }

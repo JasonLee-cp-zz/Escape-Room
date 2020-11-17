@@ -277,6 +277,38 @@ void gamePlay() {
 		}
 		cout << "\n";
 	}
+	
+	//Draw control boards, Ammo/Bomb status
+	gotoxy(30, 15);
+	printf("\x1b[32m");
+	cout << "score: ";
+	printf("\x1b[0m");
+	cout << 0; //7
+	gotoxy(50, 15);
+	 printf("\x1b[32m");
+	cout << "Ammo: ";
+	cout << 0;
+	gotoxy(50, 16);
+	 printf("\x1b[32m");
+	cout << "Bomb: ";
+	cout << 0;
+	gotoxy(30, 16);
+	 printf("\x1b[32m");
+	cout << "path: ";
+	 printf("\x1b[0m");
+	cout << 0; //6
+	gotoxy(30, 17);
+	 printf("\x1b[32m");
+	cout << "(x,y): ";
+	 printf("\x1b[0m");
+	cout << 1 << "," << 1;
+	gotoxy(30, 18);
+	 printf("\x1b[32m");
+	cout << "direction: ";
+	 printf("\x1b[0m");
+	cout << "RIGHT";
+	 printf("\x1b[0m");
+
 
 
 }

@@ -4,8 +4,11 @@ HKU ENGG1340 Project
 !!! Game Info !!!
 <Before Game>
     1) Download the zip file from the github repo.
+    
     2) Extract the zip file and place all the 8 files into the home directory (cd ~)
+    
     3) Type "bash bash.sh"
+    
     4) You're good to go !!
 
 

@@ -552,7 +552,25 @@ void gamePlay() {
 			return;
 		}
 	}
-
-
 }
+
+
+void gameInfo() {
+	refresh();
+	printf("\x1b[32m");
+	cout << "\n\n";
+	cout << "			        [Control Panel]\n";
+	cout << "	     -------------------------------------------------------\n\n";
+	cout << "	                  W[up] S[down] A[left] D[right]\n\n";
+	cout << "		              Space Bar[Choose]\n\n\n\n\n\n\n\n";
+	cout << "		        HKU - Lee Changjin & Han Changmin\n";
+	cout << "	                  Enter Space Bar to RETURN\n";
+	printf("\x1b[0m");
+	while (true) {
+		if (keyControl() == SUBMIT) {
+			return;
+		}
+	}
+}
+
 

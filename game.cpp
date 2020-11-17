@@ -188,3 +188,48 @@ void scoreBoard() { //When finish the game, view scoreboard
 	}
 	sleep(3);
 }
+
+
+void gamePlay() {
+	loadData(); 
+	refresh();
+	 //Initialize x,y coordinates
+	int xCor = 2;
+	int yCor = 2;
+	//Ammo and Bomb initialized to 0
+	int Ammo = 0;
+	int Bomb = 0;
+	string userName = userInfo(); //Get username
+	refresh();
+	//Path and Score initialized to 0
+	int path = 0;
+	int score = 0;
+	//Draw map
+	vector<string>board{                                         //H
+	"################################################################################",
+	"#*               #             B     #     A   ##    ##   A       #            #",
+	"#   ##  #############  ####################    ##    ##    ### ####  #   ####  #",
+	"#   ##A #           #A #                A #    ##B         ###    #  #   #A    #",
+	"#   ##  #######A   #######     ############    #####     #####    # B#   #######",
+	"#             #    #B#                         #         ##       ####         #",
+	"#       #######    ######################## ## ################   #A          A#",
+	"###           ######      #               # ##    #B         A#   #######    ###",
+	"#A#        B  #A          #   A      ###  # ##                #              #@#",
+	"################################################################################"
+	};
+	
+	itemGen(board); //item random generator
+	boardHeight = board.size();
+	boardWidth = board[0].length();
+	
+	//Assign HP as 3 to every wall
+	vector<vector<int>>boardHP(boardHeight,vector<int>(boardWidth,0)); //boardHP
+	for (int i = 0; i < boardHeight; i++) {
+		for (int j = 0; j < boardWidth; j++) {
+			if (board[i][j] == '#') boardHP[i][j] = 3;
+		}
+	}
+
+
+}
+

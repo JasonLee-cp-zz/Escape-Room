@@ -38,3 +38,15 @@ int keyControl(){
  else if(cur== 'o' || cur == 'O') return BOMB;
  else if(cur== ' ') return SUBMIT;
 }
+
+
+void titleDraw() { //Main Title draw
+	cout << "\n\n\n\n";
+	printf("\x1b[31m"); printf("\x1b[42m"); 
+	cout << "		#######    #####   ####      #      ####    #####\n";
+	cout << "		#         #       #         # #     #   #   #    \n";
+	cout << "		#######    ####   #        #####    ####    #####\n";
+	cout << "		#              #  #       #     #   #       #    \n";
+	cout << "		#######   #####    ####  #       #  #       #####\n";
+	printf("\x1b[0m");
+}

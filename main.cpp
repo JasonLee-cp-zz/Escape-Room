@@ -4,10 +4,10 @@ using namespace std;
 
 //MAIN FUNCTION
 int main() {
-	system("clear");
+	system("clear"); //clear screen when started
 	while (true) {
-		titleDraw();
-		int menuCode = menuDraw();
+		titleDraw(); //Draw the main page
+		int menuCode = menuDraw(); //menuCode returns an integer which decides the game control function (game play/game info/exit)
 		if (menuCode == 0) { //0 -> game start
 			gamePlay();
 		}
@@ -15,7 +15,7 @@ int main() {
 			gameInfo();
 		}
 		else { //2 -> exit
-			saveData();
+			saveData(); //Save score data to a file when exit
 			printf("\033c");
 			return 0;
 		}

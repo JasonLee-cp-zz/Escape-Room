@@ -3,7 +3,10 @@ HKU ENGG1340 Project
 
 !!! Game Info !!!
 
-<Before Game>
+    -> Collect as many as items possible with FEWER paths/Ammo/Bombs
+    
+
+    <Before Game>
     
     1) Download the zip file from the github repo.
     
@@ -12,6 +15,13 @@ HKU ENGG1340 Project
     3) Type "bash bash.sh"
     
     4) You're good to go !!
+    
+    
+    <In Game> 
+    
+    1) Direction Control Keys: W(up) S(down) A(left) D(right)
+   
+      
 
 
 (1) Team Members :

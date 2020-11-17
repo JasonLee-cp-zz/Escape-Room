@@ -449,6 +449,107 @@ void gamePlay() {
 			}
 			break;
 		}
+		//When the current position is just one distance from any border, don't proceed. If not, move one distance to the desired direction
+		// Update the (x,y) coordinate and path at the control board right below the map
+		case UP: { 
+			
+			if (r == 2 || board[r-2][c-1] == '#') continue;
+			directionStatus = UP;
+			gotoxy(37, 17);
+			cout << --xCor;
+			gotoxy(41, 18);
+			cout << "     "; gotoxy(41, 18);
+			cout << "UP";
+			gotoxy(c, r); cout << " ";
+			gotoxy(c, --r); cout << "*";
+			gotoxy(36, 16);
+			
+			cout << ++path;
+
+			break;
+		}
+		case DOWN: {
+			if (r == boardHeight-1 || board[r][c-1] == '#') continue;
+			gotoxy(37, 17);
+			cout << ++xCor;
+			gotoxy(41, 18);
+			cout << "     "; gotoxy(41, 18);
+			cout << "DOWN";
+			directionStatus = DOWN;
+			gotoxy(c, r); cout << " ";
+			gotoxy(c, ++r); cout << "*";
+			gotoxy(36, 16);
+			
+			cout << ++path;
+			break;
+		}
+		case LEFT: {
+			if (c == 2 || board[r-1][c - 2] == '#') continue;
+			gotoxy(39, 17);
+			cout << --yCor;
+			gotoxy(41, 18);
+			cout << "     "; gotoxy(41, 18);
+			cout << "LEFT";
+			directionStatus = LEFT;
+			gotoxy(c, r); cout << " ";
+			gotoxy(--c, r); cout << "*";
+			gotoxy(36, 16);
+			
+			cout << ++path;
+
+			break;
+		}
+		case RIGHT: {
+			if (c == boardWidth - 1 ||board[r-1][c]=='#') continue;
+			gotoxy(39, 17);
+			cout << ++yCor;
+			gotoxy(41, 18);
+			cout << "     "; gotoxy(41, 18);
+			cout << "RIGHT";
+			directionStatus = RIGHT;
+			gotoxy(c, r); cout << " ";
+			gotoxy(++c, r); cout << "*";
+			gotoxy(36, 16);
+			
+			cout << ++path;
+			break;
+		}
+		}
+		//When the current position is at the item, get rid of it and make the score increase by one
+		if (board[r-1][c-1] == '!') {
+			board[r-1][c-1] = ' ';
+			gotoxy(37, 15);
+			cout << ++score;
+
+		}
+		
+		//When the player gets 'A' (Ammo), increase the current Ammo status by 5
+		if (board[r-1][c-1] == 'A') {
+			board[r-1][c-1] = ' ';
+			Ammo += 5;
+			gotoxy(56, 15);
+			cout << Ammo;
+		}
+		
+		//When the player gets 'B' (Bomb), increase the current Bomb status by 1
+		if (board[r-1][c-1] == 'B') {
+			board[r-1][c-1] = ' ';
+			Bomb++;
+			gotoxy(56, 16);
+			cout << Bomb;
+		}
+		
+		//When the player encounters the destination, save the score data and print the scoreBoard and exit
+		if (board[r-1][c-1] == '@') {
+			refresh();
+		
+		score=100*score-0.5*path+Ammo*3+Bomb*5; 
+		//Score Calculation Algorithm: The more items, more remaining Ammo/Bomb, the higher score. 
+		//The more the path, the less the score will be.
+			
+		mp.insert(pair<int, string>(score, userName)); //Save the current game score, and call the scoreBoard() function
+			scoreBoard();
+			return;
 		}
 	}
 

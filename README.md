@@ -2,6 +2,7 @@
 HKU ENGG1340 Project
 
 !!! Game Info !!!
+
 <Before Game>
     
     1) Download the zip file from the github repo.

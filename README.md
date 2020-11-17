@@ -17,12 +17,7 @@ HKU ENGG1340 Project
 
     (I) Basic Features
 
-       (a) Stages
-    
-        (a1) Three Stages (Easy, Medium, Hard)
-      
-        (a2) Bonus Map (Item random generation - as many items as possible in the limited time)
-      
+       (a) Stage
       
        (b) Items
     
@@ -33,25 +28,17 @@ HKU ENGG1340 Project
         
          (c1) A -> Ammo / 5 bullets per 1 Ammo
       
-         (c2) B -> Time Bomb / bomb up&down&left&right by one cell ->explode in 2-3 seconds
-      
-         (c3) M -> Magnet / Collect a distant item (visual effect of pulling the item into the user)
-      
-         (c4) (Optional) S -> Super Weapon / BFS
+         (c2) B -> bomb up&down&left&right by one cell 
          
       
         (d) Score Calculation System
     
-         (d1) X: score   Y: # of paths
+         (d1) X: score   Y: # of paths    A: remaining Ammo    B: remaining Bomb
       
-              Total Score = X*50 - Y*0.5 (Details TBA)
-           
-              If the Scores are the same, the player with less paths wins
+              Total Score = X*50 - Y*0.5 + A*3 + B*5
 
 
     (II) Generation of random game sets or events
-
-      - Wandering monsters in the map
     
        - Random generation of items
        
@@ -67,12 +54,12 @@ HKU ENGG1340 Project
 
        - dynamic size of multimap to store username/score/# of paths
     
-        - more too be added...
+       - Score Data management through file (.txt)
     
     
     (V) File input/output (e.g., for loading/saving game status)
 
-        - Score.txt file to store username/score/#of paths
+        - Score.txt file to store username / score
     
       - Import the scoreboard from the file when a new game is started
       

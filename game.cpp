@@ -328,6 +328,127 @@ void gamePlay() {
 
 			break;
 			}
+		case SHOOT: { //Case shoot
+			if (Ammo <= 0) break; //When no ammo, don't do that
+			Ammo--;
+			gotoxy(56, 15);
+			cout << "      ";
+			gotoxy(56, 15);
+			cout << Ammo; //Update Ammo status
+			
+			//Ammo is fired to the "current" direction.
+			//For loop to iterate from the next position of the current position all the way to the any other barricade(wall,ammo,bomb,items,border)
+			//Four cases: UP/DOWN/LEFT/RIGHT
+			//When hit the wall not on the border, call the HPColor function to decrease HP by one and change the color When HP becomes 0, get rid of it
+			if (directionStatus == UP) {
+				int bullet = xCor - 1; //bullet refers to the current position +1 (depending on the direction -> x or y coordinate)
+				
+				//Proceed the while loop until it encounters with any barricade
+				while (board[bullet-1][yCor-1] != '!' && board[bullet-1][yCor-1] != '#' && board[bullet-1][yCor-1] != '*' && board[bullet-1][yCor-1] != '@') {
+					gotoxy(yCor, bullet);
+					cout << "x";
+					usleep(240); 
+					gotoxy(yCor, bullet);
+					cout << " ";
+					bullet--;
+				}
+				
+				//When encountered with a barricade, if it's the border, destination, just break since the bullet cannot go through them
+				if (bullet == 1 || bullet == boardHeight) break;
+				if (board[bullet-1][yCor-1] == '@')break;
+				if (board[bullet-1][yCor-1] == '#') { //When there's a wall, call HPColor function to handle with as mentioned above
+					if (boardHP[bullet-1][yCor-1] == 1) {
+						board[bullet-1][yCor-1] = ' ';
+						gotoxy(yCor, bullet); cout << " ";
+						break;
+					}
+					HPColor(board, --boardHP[bullet-1][yCor-1], bullet, yCor);
+					break;
+				}
+				board[bullet][yCor] = ' '; //Get rid of the element 
+				gotoxy(yCor, bullet); cout << " ";
+
+
+			}
+			else if (directionStatus == DOWN) {
+				int bullet = xCor + 1;
+				while (board[bullet-1][yCor-1] != '!' && board[bullet-1][yCor-1] != '#' && board[bullet-1][yCor-1] != '*' && board[bullet-1][yCor-1] != '@') {
+					gotoxy(yCor, bullet);
+					cout << "x";
+					usleep(240); 
+					gotoxy(yCor, bullet);
+					cout << " ";
+					bullet++;
+				}
+				if (bullet == 1 || bullet == boardHeight) break;
+				if (board[bullet-1][yCor-1] == '@')break;
+				if (board[bullet-1][yCor-1] == '#') {
+					if (boardHP[bullet-1][yCor-1] == 1) {
+						board[bullet-1][yCor-1] = ' ';
+						gotoxy(yCor, bullet); cout << " ";
+						break;
+					}
+					HPColor(board, --boardHP[bullet-1][yCor-1], bullet, yCor);
+					break;
+				}
+				board[bullet-1][yCor-1] = ' ';
+				gotoxy(yCor, bullet); cout << " ";
+
+
+			}
+			else if (directionStatus == LEFT) {
+				int bullet = yCor - 1;
+				while (board[xCor-1][bullet-1] != '!' && board[xCor-1][bullet-1] != '#' && board[xCor-1][bullet-1] != '*' && board[xCor-1][bullet-1] != '@') {
+					gotoxy(bullet, xCor);
+					cout << "x";
+					usleep(240); 
+					gotoxy(bullet, xCor);
+					cout << " ";
+					bullet--;
+				}
+				if (bullet == 1 || bullet == boardWidth) break;
+				if (board[xCor-1][bullet-1] == '@')break;
+				if (board[xCor-1][bullet-1] == '#') {
+					if (boardHP[xCor-1][bullet-1] == 1) {
+						board[xCor-1][bullet-1] = ' ';
+						gotoxy(bullet, xCor); cout << " ";
+						break;
+					}
+					HPColor(board, --boardHP[xCor-1][bullet-1], xCor, bullet);
+					break;
+				}
+				board[xCor-1][bullet-1] = ' ';
+				gotoxy(bullet, xCor); cout << " ";
+
+			}
+			else if (directionStatus == RIGHT) {
+				int bullet = yCor + 1;
+				while (board[xCor-1][bullet-1] != '!' && board[xCor-1][bullet-1] != '#' && board[xCor-1][bullet-1] != '*' && board[xCor-1][bullet-1] != '@') {
+					gotoxy(bullet, xCor);
+					cout << "x";
+					usleep(240); 
+					gotoxy(bullet, xCor);
+					cout << " ";
+					bullet++;
+				}
+				if (bullet == 1 || bullet == boardWidth) break;
+				if (board[xCor-1][bullet-1] == '@')break;
+				if (board[xCor-1][bullet-1] == '#') {
+					if (boardHP[xCor-1][bullet-1] == 1) {
+						board[xCor-1][bullet-1] = ' ';
+						gotoxy(bullet, xCor); cout << " ";
+						break;
+					}
+					HPColor(board, --boardHP[xCor-1][bullet-1], xCor, bullet);
+				
+					break;
+				}
+				board[xCor-1][bullet-1] = ' ';
+				gotoxy(bullet, xCor); cout << " ";
+
+			}
+			break;
+		}
 		}
 	}
 

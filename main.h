@@ -7,10 +7,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <stdio.h>
-#include <termio.h>
 #include <termios.h>
-#include <unistd.h>
-#include <term.h>
 #include <string>
 #include <vector>
 #include <map>

@@ -133,3 +133,20 @@ void itemGen(vector<string>& board) { //Iten Random Generator
 		cnt--;
 	}
 }
+
+
+void HPColor(vector<string>& board, int HP, int x, int y) { //Each wall has three HPs, you need to hit with ammo for three times or only once with bomb 
+	if (HP == 2) { //When  HP is full, change color
+		gotoxy(y, x);
+		//setColor(yellow, yellow);
+		printf("\x1b[33m");printf("\x1b[43m");
+		cout << board[x-1][y-1];
+		printf("\x1b[0m");
+	}
+	if (HP == 1) { //When HP has one HP, change color
+		gotoxy(y, x);
+		printf("\x1b[32m");printf("\x1b[42m");
+		cout << board[x-1][y-1];
+		printf("\x1b[0m");
+	}
+}

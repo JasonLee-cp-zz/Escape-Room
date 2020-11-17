@@ -63,5 +63,44 @@ int menuDraw() {
 	gotoxy(x, y + 2); //+2 y
 	cout << "EXIT\n\n";
 	printf("\x1b[0m");
+	
+	
+	while (true) { // Enable user to select the option by controlling (w,a,s,d) direction keys
+		int cur = keyControl();
+		switch (cur) {
+		case UP: {
+			if (y >= 13) { //When the cursor is not at the top, just move upward by one
+				gotoxy(x - 2, y);
+				cout << " ";
+				gotoxy(x - 2, --y);
+				cout << ">";
+			}
+			else if (y == 12) { //When the cursor position is at the top, go to the bottom
+				gotoxy(x - 2, y); cout << " ";
+				y += 2;
+				gotoxy(x - 2, y); cout << ">";
+			}
 
+			break;
+		}
+		case DOWN: { //Same procedure with UP
+			if (y <= 13) {
+				gotoxy(x - 2, y);
+				cout << " ";
+				gotoxy(x - 2, ++y);
+				cout << ">";
+			}
+			else if (y == 14) {
+				gotoxy(x - 2, y); cout << " ";
+				y -= 2;
+				gotoxy(x - 2, y); cout << ">";
+			}
+			break;
+		}
+		case SUBMIT: { //When enter SPACE KEY, submit
+			return y - 12;
+			break;
+		}
+		}
+	}
 }

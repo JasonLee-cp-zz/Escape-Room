@@ -1,4 +1,6 @@
 //#pragma once
+
+//Libraries needed for the project
 #ifndef __MAIN_H__
 #define __MAIN_H__
 #include <iostream>
@@ -15,13 +17,12 @@
 #include <fstream>
 using namespace std;
 
-//util
-void init();
-void gotoxy(int, int);
+//util functions
+void gotoxy(int, int); 
 void refresh();
 
 
-//game
+//game functions
 void titleDraw();
 int menuDraw();
 void gameInfo();

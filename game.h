@@ -5,6 +5,8 @@
 #include <iostream>
 #include "main.h"
 using namespace std;
+
+//Directions to integer values
 #define UP 0
 #define DOWN 1
 #define LEFT 2
@@ -13,6 +15,8 @@ using namespace std;
 #define SHOOT 5
 #define BOMB 6
 
+
+//Initialize all the variables, functions, and STLs
 int boardHeight;
 int boardWidth;
 bool first_play = true;

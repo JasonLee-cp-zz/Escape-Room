@@ -229,6 +229,54 @@ void gamePlay() {
 			if (board[i][j] == '#') boardHP[i][j] = 3;
 		}
 	}
+	
+	//Set the starting point/ destination
+	board[1][1] = '*';
+	board[boardHeight - 2][boardWidth - 2] = '@';
+	//current cursor position
+	int r = 2;
+	int c = 2;
+	
+	//Color player,destination,wall,items,ammo,bomb
+	for (int i = 0; i < boardHeight; i++) {
+		for (int j = 0; j < boardWidth; j++) {
+			if (board[i][j] == '#') {
+				
+				printf("\x1b[31m"); printf("\x1b[41m");
+				cout << board[i][j];
+				printf("\x1b[0m");
+			}
+			else if (board[i][j] == '*') {
+				printf("\x1b[35m");
+				cout << board[i][j];
+				
+			}
+			else if (board[i][j] == '@') {
+				printf("\x1b[32m");
+				cout << board[i][j];
+				
+			}
+			else if (board[i][j] == 'A') {
+				printf("\x1b[36m");
+				cout << board[i][j];
+				printf("\x1b[0m");
+			}
+			else if (board[i][j] == 'B') {
+				printf("\x1b[36m");
+				cout << board[i][j];
+				printf("\x1b[0m");
+			}
+			else if (board[i][j] == '!') {
+				printf("\x1b[33m");
+				cout << board[i][j];
+				printf("\x1b[0m");
+			}
+			else {
+				cout << board[i][j];
+			}
+		}
+		cout << "\n";
+	}
 
 
 }

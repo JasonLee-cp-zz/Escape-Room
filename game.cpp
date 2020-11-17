@@ -150,3 +150,24 @@ void HPColor(vector<string>& board, int HP, int x, int y) { //Each wall has thre
 		printf("\x1b[0m");
 	}
 }
+
+
+void loadData(){ // When open the game, load the score data from the file
+ string input_name;
+ int input_score;
+ fin.open(fileName.c_str());
+
+ if(fin.fail()) { //When the file doesn't exist, make one
+   ofstream outfile(fileName);
+   first_open=false; //Make first_open variable to false so that we don't create another file later on when unnecessary
+ }
+ else{
+   if(first_play==true){ //If the user plays for the first time, load data and insert to hashmap
+	while(fin>>input_name>>input_score){
+		mp.insert(pair<int,string>(input_score,input_name));
+	}
+	first_open=false; //Make first_open, first_play to false since we just opened and played so that we wouldn't over-do later on
+	first_play=false;
+    }
+  }
+}

@@ -171,3 +171,20 @@ void loadData(){ // When open the game, load the score data from the file
     }
   }
 }
+
+
+void scoreBoard() { //When finish the game, view scoreboard
+	refresh();
+	printf("\x1b[32m");
+	gotoxy(33, 8);
+	cout << "  Score Board\n";
+	gotoxy(32, 9);
+	cout << "------------------\n\n";
+	printf("\x1b[0m");
+	int i = 1;
+	for (auto itr : mp) { //Print out from the hashmap
+		gotoxy(35, 9 + i++);
+		cout << "[" << itr.second << "]  " << itr.first << '\n';
+	}
+	sleep(3);
+}

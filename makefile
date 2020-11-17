@@ -1,5 +1,5 @@
 
-SUB = g++ -I ~/local/include -I ~/local/include/ncursestw -L ~/local/lib -Incursestw -Idl -pthread
+SUB = g++ -pedantic-errors
 
 game.o : game.cpp game.h
 	$(SUB) -c game.cpp

@@ -3,7 +3,7 @@ HKU ENGG1340 Project
 
 !!! Game Info !!!
 
-    -> Collect as many as items possible with FEWER paths/Ammo/Bombs
+    -> Collect as many as items possible with FEWER paths/Ammo/Bombs and get to the destination !!!
     
 
     <Before Game>
@@ -20,6 +20,16 @@ HKU ENGG1340 Project
     <In Game> 
     
     1) Direction Control Keys: W(up) S(down) A(left) D(right)
+    
+    2) In the main menu, click SPACE to continue..
+    
+    3) When entered the game, directions keys are the same 
+    
+      3-1) 'P' for shoot Ammo, 'O' for Bomb (Make sure to collect A/B to be able to perform this function)
+      
+    4) (IMPORTANT) When you shoot Ammo, you can ONLY shoot to the "current" direction, meaning the direction status at the bottom of the screen indicates
+    
+       the current direction. (This means, you cannot shoot upward or downward when you're stuck with a narrow hall with no space up and down
    
       
 

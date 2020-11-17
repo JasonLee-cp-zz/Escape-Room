@@ -2,12 +2,10 @@
 
 
 void refresh(){
-//system("clear");
-//write(1,"\033[1;1H\033[2J",10);
-printf("\033c");
+printf("\033c"); //clear screen
 }
 
 void gotoxy(int x, int y){
-printf("%c[%d;%df",0x1B,y,x);
+printf("%c[%d;%df",0x1B,y,x); //Read (x,y) coordinate and adjust the current position to the given position 
 }
 

@@ -1,6 +1,6 @@
-# Escape-Room
+# Escape-Room LINUX
 
-!!! Game Info !!!
+<Game Info >
 
     -> Collect as many as items possible with FEWER paths/Ammo/Bombs and get to the destination !!!
     

@@ -37,9 +37,9 @@
 
 (1) Team Members :
 
-    Changjin Lee UID : 3035435840
+    Changjin Lee 
 
-    Changmin Han UID : 3035496519
+    Changmin Han 
 
 (2) About Game:
 

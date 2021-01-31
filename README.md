@@ -39,8 +39,6 @@
 
     Changjin Lee 
 
-    Changmin Han 
-
 (2) About Game:
 
     Game Title: Escape Room

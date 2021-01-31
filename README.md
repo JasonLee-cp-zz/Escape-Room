@@ -44,7 +44,7 @@
 
     Game Title: Escape Room
 
-    Game Description: Escape the room collecting as many items as you can and avoiding creeping monsters.
+    Game Description: Escape the room collecting as many items as you can.
 
 (3) Game Features:
 

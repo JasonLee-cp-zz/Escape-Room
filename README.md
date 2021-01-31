@@ -38,6 +38,7 @@
 (1) Team Members :
 
     Changjin Lee 
+    Changjin Han
 
 (2) About Game:
 
